@@ -22,6 +22,8 @@ express()
     .get('/app', (req, res) => {
         get(req.query.url).then((response) => {
             res.send(response)
+        }).catch((err)=>{
+            res.send(err)
         })
     })
     .listen(PORT, () => console.log(`Listening on ${ PORT }`))
