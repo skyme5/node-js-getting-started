@@ -4,7 +4,7 @@ const request = require('request')
 const PORT = process.env.PORT || 5000
 const
     socks5 = require('simple-socks'),
-    server = socks5.createServer().listen(PORT);
+    server = socks5.createServer().listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 
 // function get(url) {
