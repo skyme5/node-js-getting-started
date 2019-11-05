@@ -16,7 +16,7 @@ var server = http.createServer(function (req, res) {
   });
 
   proxy.web(req, res, {target: target});
-}).listen(8080);  //this is the port your clients will connect to
+}).listen(process.env.PORT);  //this is the port your clients will connect to
 
 var regex_hostport = /^([^:]+)(:([0-9]+))?$/;
 
